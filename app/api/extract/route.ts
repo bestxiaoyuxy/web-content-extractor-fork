@@ -3,6 +3,9 @@ import { Readability } from '@mozilla/readability';
 import chromium from 'chrome-aws-lambda';
 import { JSDOM } from 'jsdom';
 
+export const dynamic = 'force-dynamic';
+export const runtime = 'edge';
+
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
