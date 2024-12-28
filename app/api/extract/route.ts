@@ -1,10 +1,8 @@
 import { NextResponse } from 'next/server';
 import { Readability } from '@mozilla/readability';
-import chromium from 'chrome-aws-lambda';
 import { JSDOM } from 'jsdom';
 
 export const dynamic = 'force-dynamic';
-export const runtime = 'edge';
 
 export async function GET(request: Request) {
   try {
@@ -18,21 +16,12 @@ export async function GET(request: Request) {
       );
     }
 
-    // 启动浏览器
-    const browser = await chromium.puppeteer.launch({
-      args: chromium.args,
-      executablePath: await chromium.executablePath,
-      headless: true,
-    });
-
-    // 创建新页面并访问URL
-    const page = await browser.newPage();
-    await page.goto(targetUrl, { waitUntil: 'networkidle0' });
-    const content = await page.content();
-    await browser.close();
+    // 使用fetch获取页面内容
+    const response = await fetch(targetUrl);
+    const html = await response.text();
 
     // 使用Readability解析内容
-    const dom = new JSDOM(content);
+    const dom = new JSDOM(html);
     const reader = new Readability(dom.window.document);
     const article = reader.parse();
 
