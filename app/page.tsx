@@ -74,11 +74,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h1 className="text-5xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
-              AI驱动的网页内容提取
+              智能网页内容提取
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              通过智能算法提取网页的核心内容，移除广告和干扰元素，
-              为AI模型提供清晰的输入数据。
+              使用 Readability 算法提取网页的核心内容，移除广告和干扰元素，
+              让阅读体验更加清晰。
             </p>
           </div>
 
