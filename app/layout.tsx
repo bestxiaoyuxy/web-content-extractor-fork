@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Web Content Extractor",
-  description: "Extract readable content from any webpage",
+  title: "Web Content Extractor - AI驱动的网页内容提取工具",
+  description: "通过智能算法提取网页的核心内容，移除广告和干扰元素，为AI模型提供清晰的输入数据。",
 };
 
 export default function RootLayout({
@@ -18,11 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${inter.variable} antialiased`}
-        suppressHydrationWarning
-      >
+    <html lang="zh" className={inter.variable} suppressHydrationWarning>
+      <body suppressHydrationWarning>
         {children}
       </body>
     </html>
