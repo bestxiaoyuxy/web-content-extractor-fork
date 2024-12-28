@@ -7,7 +7,24 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      borderRadius: {
+        'xl': '1rem',
+        '2xl': '1.25rem',
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: 'none',
+            color: '#334155',
+            p: {
+              marginTop: '1.25em',
+              marginBottom: '1.25em',
+            },
+          },
+        },
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/typography'),
