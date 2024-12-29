@@ -1,13 +1,14 @@
 # Web Content Extractor
 
-智能网页内容提取工具，基于 Readability 算法，能够自动识别和提取网页的核心内容，移除广告等干扰元素。
+一个简单高效的网页内容提取工具，专门设计用于AI分析场景。本工具可以清理网页中的广告、导航栏等无关内容，只保留主要文章内容，使AI能够更好地理解和分析文本。
 
 ## 🌟 特点
 
-- 🤖 智能内容识别：使用 Readability 算法自动识别网页主要内容
-- 🧹 清理干扰元素：自动移除广告、导航栏等无关内容
-- 🚀 简单易用的 API：提供 RESTful API 接口，支持批量处理
-- 💻 现代化 UI：简洁优雅的用户界面，良好的响应式设计
+- 🚀 基于Next.js构建的现代Web应用
+- 📝 使用Mozilla的Readability算法提取主要内容
+- 🧹 自动清理多余的HTML标签和格式
+- 🎯 专注于提取对AI分析有价值的内容
+- 💨 快速且轻量级的API
 
 ## 🔗 在线演示
 
@@ -81,7 +82,3 @@ GET /api/extract?url=https://example.com
 ## 📄 许可证
 
 MIT License - 查看 [LICENSE](LICENSE) 文件了解更多信息。
-
-## 🔗 在线演示
-
-访问 [https://web-content-extractor.vercel.app](https://web-content-extractor.vercel.app) 体验在线版本。

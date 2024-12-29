@@ -32,9 +32,16 @@ export async function GET(request: Request) {
       );
     }
 
+    // 清理文本内容，移除多余的换行符
+    const cleanText = (text: string) => {
+      return text
+        .replace(/[\n\s]+/g, ' ')  // 将连续的换行和空白字符替换为单个空格
+        .trim();                    // 移除首尾空白
+    };
+
     return NextResponse.json({
       title: article.title,
-      content: article.textContent,
+      content: cleanText(article.textContent || ''),
       excerpt: article.excerpt,
       byline: article.byline,
       length: article.length,
